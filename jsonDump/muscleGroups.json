@@ -1,0 +1,24 @@
+{
+    "mainGroups": [
+        {
+            "name": "Front Shoulder",
+            "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Xonotic_512.png",
+            "systemName": "frontShoulder"
+        },
+        {
+            "name": "Back Shoulder",
+            "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Xonotic_512.png",
+            "systemName": "backShoulder"
+        },
+        {
+            "name": "Chest",
+            "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Xonotic_512.png",
+            "systemName": "chest"
+        },
+        {
+            "name": "Legs",
+            "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Xonotic_512.png",
+            "systemName": "legs"
+        }
+    ]
+}
