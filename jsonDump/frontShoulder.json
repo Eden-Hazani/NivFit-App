@@ -2,16 +2,20 @@
     "exercises": [
         {
             "name": "Side Shoulder Press",
-            "description": "Description By Niv",
+            "description": "Description By Niv gdfghkdfjgdfgjiihuijsifidkpofgjksgoiidfg gkdifnguidfughjspodkgjlkdjknfbnmosdjbvnlo nsiodjgkmdjkngoidofngidfopmbduijopsmfnuifoim",
+            "shortDescription": "Side shoulder muscles",
             "instructorName": "Niv",
-            "videoURL": "https://www.youtube.com/embed/C5m_ndVdA_s?rel=0&autoplay=1&mute=1&showinfo=0&controls=0",
+            "instructorImg": "niv.jpg",
+            "videoURL": "https://www.youtube.com/embed/9em32dDnTck?playlist=9em32dDnTck&loop=1&mute=1",
             "frontImg": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/man-exercising-in-the-gym-royalty-free-image-1569414297.jpg?resize=980:*"
         },
         {
-            "name": "Side Shoulder Press",
+            "name": "Front Shoulder Press",
             "description": "Description By Niv",
             "instructorName": "Niv",
-            "videoURL": "https://www.youtube.com/embed/C5m_ndVdA_s?rel=0&autoplay=1&mute=1&showinfo=0&controls=0",
+            "instructorImg": "niv.jpg",
+            "shortDescription": "Front shoulder muscles",
+            "videoURL": "https://www.youtube.com/embed/9em32dDnTck?rel=0&autoplay=1&mute=1&showinfo=0&controls=0",
             "frontImg": "https://www.mensjournal.com/wp-content/uploads/mf/no_frills_shoulder_workout_main.jpg?w=1200&h=675&crop=1&quality=86&strip=all&iswp=1"
         }
     ]

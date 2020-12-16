@@ -80,7 +80,6 @@ export class ExercisesList extends Component<{ route: any, navigation: any }, Ex
                             pagingEnabled
                             showsHorizontalScrollIndicator={false}
                             scrollEventThrottle={16}
-                            ItemSeparatorComponent={ListItemSeparator}
                         />
                     </View>
                 }
