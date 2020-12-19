@@ -1,11 +1,13 @@
 
 export class ExerciseModel {
     public constructor(
-        public name?: string,
-        public description?: string,
-        public instructorName?: string,
+        public mainList?: [
+            { name?: string, shortDescription?: string },
+            { description?: string },
+            { instructorName?: string, instructorImg?: string }
+        ],
         public videoURL?: string,
-        public shortDescription?: string,
-        public instructorImg?: string
+        public difficultyLevel?: number,
+        public frontImg?: string
     ) { }
 }

@@ -18,8 +18,8 @@ export class ExerciseListItem extends Component<any>{
                         flexDirection: this.props.direction
                     }}>
                         <LinearGradient colors={['rgba(255,255,255,1)', 'rgba(255,255,255,0)']} start={[0, 1]} end={[.6, 0]} style={{ zIndex: 10, position: 'absolute', left: 10, padding: 15, paddingRight: 200, borderRadius: 15 }}>
-                            <AppTextHeader textAlign={this.props.headTextAlign} fontSize={20} color={Colors.black}>{this.props.name}</AppTextHeader>
-                            <AppText textAlign={this.props.subTextAlign} fontSize={17} color={Colors.black}>{this.props.shortDescription}</AppText>
+                            <AppTextHeader textAlign={this.props.headTextAlign} fontSize={20} color={Colors.black}>{this.props.mainList[0].name}</AppTextHeader>
+                            <AppText textAlign={this.props.subTextAlign} fontSize={17} color={Colors.black}>{this.props.mainList[0].shortDescription}</AppText>
                         </LinearGradient>
                         <Image style={{
                             zIndex: -10,

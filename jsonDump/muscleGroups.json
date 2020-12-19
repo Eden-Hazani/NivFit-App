@@ -1,24 +1,34 @@
 {
     "mainGroups": [
         {
-            "name": "Front Shoulder",
-            "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Xonotic_512.png",
+            "name": "Shoulders",
+            "imgUrl": "https://i.imgur.com/6GzfMlb.jpg",
             "systemName": "frontShoulder"
         },
         {
-            "name": "Back Shoulder",
-            "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Xonotic_512.png",
-            "systemName": "backShoulder"
-        },
-        {
             "name": "Chest",
-            "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Xonotic_512.png",
+            "imgUrl": "https://i.imgur.com/COjmdtB.jpg",
             "systemName": "chest"
         },
         {
             "name": "Legs",
-            "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Xonotic_512.png",
+            "imgUrl": "https://i.imgur.com/TpQy9a0.jpg",
             "systemName": "legs"
+        },
+        {
+            "name": "Biceps",
+            "imgUrl": "https://i.imgur.com/ExhSZfX.jpg",
+            "systemName": "biceps"
+        },
+        {
+            "name": "Triceps",
+            "imgUrl": "https://i.imgur.com/NWm2hOc.jpg",
+            "systemName": "triceps"
+        },
+        {
+            "name": "Abs",
+            "imgUrl": "https://i.imgur.com/cUhpUWV.jpg",
+            "systemName": "abs"
         }
     ]
 }

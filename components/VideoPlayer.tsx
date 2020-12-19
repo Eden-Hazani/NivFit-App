@@ -3,6 +3,7 @@ import { View, StyleSheet, Dimensions } from 'react-native';
 import WebView from 'react-native-webview';
 import { LoadingAnimation } from '../animations/LoadingAnimation';
 import { Colors } from '../utility/colors';
+import { AppTextHeader } from './AppTextHeader';
 const { width, height } = Dimensions.get('screen');
 
 interface VideoPlayerState {
@@ -34,7 +35,12 @@ export class VideoPlayer extends Component<{ videoUrl: string }, VideoPlayerStat
                 </View>
                 <View style={{ height: height / 4.5, width: width / 1.08, overflow: 'hidden', position: 'absolute', top: 10, left: width / 27, right: 0, bottom: 0, justifyContent: 'center' }}>
                     {(this.state.videoHasNotLoaded || !this.state.videoHasRendered) && (
-                        <LoadingAnimation visible={this.state.videoHasNotLoaded || !this.state.videoHasRendered} />
+                        <View>
+                            <View style={{ top: 30 }}>
+                                <AppTextHeader textAlign={'center'} color={Colors.skyBlue}>Video Loading</AppTextHeader>
+                            </View>
+                            <LoadingAnimation visible={this.state.videoHasNotLoaded || !this.state.videoHasRendered} />
+                        </View>
                     )}
                     <WebView
                         style={{ opacity: this.state.videoHasRendered ? 1 : 0, zIndex: -10 }}

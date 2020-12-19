@@ -1,16 +1,21 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Animated } from 'react-native';
+import { View, StyleSheet, Animated, Dimensions } from 'react-native';
 import { ExerciseModel } from '../models/ExerciseModel';
 import * as muscleGroupFolder from "../jsonDump";
 import { ExerciseListItem } from '../components/ListComponents/ExerciseListItem';
 import { ListItemSeparator } from '../components/ListComponents/ListItemSeperatorLine';
 import { AppText } from '../components/AppText';
 import { LoadingAnimation } from '../animations/LoadingAnimation';
+import { SearchBar } from 'react-native-elements';
+import { Colors } from '../utility/colors';
+const { width, height } = Dimensions.get('screen')
+
 interface ExercisesListState {
     muscleGroup: string
     exercisesList: ExerciseModel[]
     startAnimation: Animated.ValueXY;
     loading: boolean
+    search: string
 }
 
 
@@ -19,6 +24,7 @@ export class ExercisesList extends Component<{ route: any, navigation: any }, Ex
     constructor(props: any) {
         super(props)
         this.state = {
+            search: "",
             exercisesList: [],
             muscleGroup: this.props.route.params.muscleGroup,
             startAnimation: new Animated.ValueXY({ x: 400, y: 0 }),
@@ -59,13 +65,44 @@ export class ExercisesList extends Component<{ route: any, navigation: any }, Ex
         ]).start()
     }
 
+    updateSearch = async (search: string) => {
+        this.setState({ search })
+        if (search.trim() === "") {
+            const getKeyValue = <T, K extends keyof T>(obj: T, key: K): T[K] => obj[key];
+            const exercisesList = getKeyValue(muscleGroupFolder, this.state.muscleGroup as any)
+            this.setState({ exercisesList: exercisesList.exercises })
+            return;
+        }
+        console.log(search)
+        const exercisesList = this.state.exercisesList.filter((exercise) => { return exercise.mainList && exercise.mainList[0] && exercise.mainList[0].name && exercise.mainList[0].name.includes(search) })
+        if (exercisesList.length > 0) {
+            this.setState({ exercisesList })
+            return;
+        }
+        if (exercisesList.length === 0) {
+            const getKeyValue = <T, K extends keyof T>(obj: T, key: K): T[K] => obj[key];
+            const exercisesList = getKeyValue(muscleGroupFolder, this.state.muscleGroup as any)
+            this.setState({ exercisesList: exercisesList.exercises })
+        }
+    }
+
 
     render() {
         return (
             <View style={styles.container}>
                 {this.state.loading ? <LoadingAnimation visible={this.state.loading} /> :
                     <View>
-                        {console.log(this.state.exercisesList)}
+                        <View style={{ width: width / 1.5, alignSelf: 'center' }}>
+                            <SearchBar
+                                searchIcon={false}
+                                containerStyle={{ backgroundColor: Colors.white, borderRadius: 150 }}
+                                inputContainerStyle={{ backgroundColor: Colors.white }}
+                                lightTheme={true}
+                                placeholder="Search Exercises"
+                                onChangeText={this.updateSearch}
+                                value={this.state.search}
+                            />
+                        </View>
                         <Animated.FlatList
                             style={this.state.startAnimation.getLayout()}
                             keyExtractor={(item: any, index: any) => index.toString()}

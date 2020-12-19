@@ -32,6 +32,7 @@ export class AppTextHeader extends Component<any, any> {
                 padding: this.props.padding,
                 textAlign: this.props.textAlign,
                 fontFamily: "Raleway-ExtraBold",
+                letterSpacing: this.props.letterSpacing,
                 color: this.props.color ? this.props.color : Colors.black
             }}>{this.props.children}</Text>
         )
