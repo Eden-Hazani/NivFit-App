@@ -1,7 +1,7 @@
 import { LinearGradient } from 'expo-linear-gradient';
 import React, { Component } from 'react';
 import { View, StyleSheet, TouchableOpacity, Image, Dimensions, ImageBackground, Animated } from 'react-native';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
+import { Colors } from '../../utility/colors';
 import { AppTextHeader } from '../AppTextHeader';
 const { width, height } = Dimensions.get('screen');
 
@@ -16,18 +16,16 @@ export class HomeList extends Component<any>{
         return (
             <TouchableOpacity onPress={this.props.onPress} activeOpacity={.95}>
                 <View>
-                    <ImageBackground style={{
+                    <View style={{
                         left: 0,
-                        bottom: this.props.bottom,
                         transform: [{ rotate: `${this.props.rotate}` }],
                         width: width + 50,
                         height: 280,
-                        justifyContent: 'center', alignSelf: 'center',
-                        borderBottomColor: '#fff',
-                        borderBottomWidth: 10,
-                        borderTopColor: '#fff',
+                        alignSelf: 'center',
+                        borderTopColor: Colors.skyBlue,
                         borderTopWidth: 10,
-                    }} source={{ uri: this.props.imgUrl }} >
+                    }}  >
+                        <Image style={{ height: 350, width: width + 50 }} source={{ uri: this.props.imgUrl }} />
                         <LinearGradient colors={['rgba(255,255,255,1)', 'rgba(255,255,255,0)']} start={[0, .5]} end={[.6, .2]}
                             style={{
                                 position: 'absolute', width: width + 50, height: height / 2, top: 0, left: 0, right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center'
@@ -40,7 +38,7 @@ export class HomeList extends Component<any>{
                         }}>
                             <AppTextHeader textAlign={this.props.headTextAlign} fontSize={30} color={Colors.black}>{this.props.name}</AppTextHeader>
                         </View>
-                    </ImageBackground>
+                    </View>
                 </View>
             </TouchableOpacity>
         )

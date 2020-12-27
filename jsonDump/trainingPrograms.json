@@ -1,0 +1,69 @@
+{
+    "programs": [
+        {
+            "difficulty": 2,
+            "name": "Heavy Shoulders",
+            "week": {
+                "sunday": [
+                    {
+                        "exercise": "Leg Press",
+                        "numberOfSets": 3,
+                        "numberOfReps": 10,
+                        "muscleGroup": "Legs"
+                    },
+                    {
+                        "exercise": "Barbell lunges",
+                        "numberOfSets": 6,
+                        "numberOfReps": 5,
+                        "muscleGroup": "Legs"
+                    }
+                ],
+                "monday": [],
+                "tuesday": [
+                    {
+                        "exercise": "Barebell squat",
+                        "numberOfSets": 3,
+                        "numberOfReps": 10,
+                        "muscleGroup": "Legs"
+                    },
+                    {
+                        "exercise": "Barebell squat",
+                        "numberOfSets": 3,
+                        "numberOfReps": 10,
+                        "muscleGroup": "Legs"
+                    }
+                ],
+                "wednesday": [
+                    {
+                        "exercise": "Barebell squat",
+                        "numberOfSets": 3,
+                        "numberOfReps": 10,
+                        "muscleGroup": "Legs"
+                    },
+                    {
+                        "exercise": "Barebell squat",
+                        "numberOfSets": 3,
+                        "numberOfReps": 10,
+                        "muscleGroup": "Legs"
+                    }
+                ],
+                "thursday": [],
+                "friday": [],
+                "saturday": [
+                    {
+                        "exercise": "Barebell squat",
+                        "numberOfSets": 3,
+                        "numberOfReps": 10,
+                        "muscleGroup": "Legs"
+                    },
+                    {
+                        "exercise": "Leg Press",
+                        "numberOfSets": 3,
+                        "numberOfReps": 10,
+                        "muscleGroup": "Legs"
+                    }
+                ]
+            }
+        }
+    ]
+}

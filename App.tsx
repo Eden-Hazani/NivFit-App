@@ -8,6 +8,7 @@ import AppLoading from 'expo-app-loading';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import WelcomeScreenNavigator from './navigators/WelcomeScreenNavigator';
 import MainContext from './utility/context';
+import * as Updates from 'expo-updates';
 
 interface AppState {
   isReady: boolean
@@ -23,7 +24,19 @@ export class App extends React.Component<{}, AppState>{
       isFirstUse: false
     }
   }
+
+  checkForUpdates = async () => {
+    if ((await Updates.checkForUpdateAsync()).isAvailable) {
+      Updates.fetchUpdateAsync().then(() => {
+        Updates.reloadAsync();
+      })
+    }
+  }
+
   async componentDidMount() {
+    if (!__DEV__) {
+      this.checkForUpdates()
+    }
     // await AsyncStorage.removeItem('isFirstUse')
     const isFirstUse = await AsyncStorage.getItem('isFirstUse');
     if (isFirstUse === null) {

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import {
     Animated,
     Dimensions,
@@ -15,6 +15,7 @@ import {
 import { Colors } from '../../utility/colors';
 import { requireCouchImageSwitch } from '../../utility/requireCouchImageSwitch';
 import { AppButton } from '../AppButton';
+import { AppText } from '../AppText';
 const { width, height } = Dimensions.get('window');
 
 const Indicator = ({ scrollX, items }: any) => {
@@ -75,9 +76,10 @@ const Item = ({ scrollX, index, name, instructorImg, startingInstructions, movem
     })
 
     return (
-        <View style={styles.itemStyle}>
+        <View >
+            {/* <AppText>sdfsdfdfgfhdfsefsrg</AppText> */}
             {instructorImg &&
-                <View >
+                <View>
                     <View style={styles.textContainer}>
                         <Animated.Text style={[styles.heading,
                         { left: 10, transform: [{ translateY: translateYCouchName }], color: Colors.black }
@@ -100,7 +102,7 @@ const Item = ({ scrollX, index, name, instructorImg, startingInstructions, movem
                 </View>
             }
             {name &&
-                <ScrollView>
+                <ScrollView >
                     <View style={styles.textContainer}>
                         <Animated.Text style={[styles.heading,
                         { transform: [{ translateX: translateXName }], color: Colors.black }
@@ -157,24 +159,26 @@ const Item = ({ scrollX, index, name, instructorImg, startingInstructions, movem
 
 
 
-export default function AnimatedExerciseList(data: any) {
+export default function AnimatedExerciseTrainingList(data: any) {
     const scrollX = React.useRef(new Animated.Value(0)).current
     return (
         <View style={styles.container}>
             <Animated.FlatList
-                style={{ zIndex: 50 }}
+                style={{ flex: 1, width: 150, zIndex: 10, elevation: 10 }}
                 keyExtractor={(item: any, index: any) => index.toString()}
                 data={data.data.mainList}
-                renderItem={({ item, index }: any) => <Item {...item} index={index} scrollX={scrollX} />}
-                pagingEnabled
-                showsHorizontalScrollIndicator={false}
+                renderItem={({ item, index }: any) =>
+                    <Item {...item} index={index} scrollX={scrollX} />
+                }
                 horizontal
-                scrollEnabled={true}
                 onScroll={Animated.event(
                     [{ nativeEvent: { contentOffset: { x: scrollX } } }],
                     { useNativeDriver: true }
                 )}
+                pagingEnabled
+                scrollEnabled={true}
                 scrollEventThrottle={16}
+                showsHorizontalScrollIndicator={false}
             />
             <Indicator scrollX={scrollX} items={Object.values(data.data.mainList)} />
         </View>
@@ -189,9 +193,7 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
     },
-    itemStyle: {
 
-    },
     imageStyle: {
         borderRadius: 150,
         width: 150,

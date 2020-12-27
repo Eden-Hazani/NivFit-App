@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Animated, ScrollView } from 'react-native';
+import { AppText } from '../components/AppText';
 import { HomeList } from '../components/ListComponents/HomeList';
 import muscleGroups from '../jsonDump/muscleGroups.json';
+import { Colors } from '../utility/colors';
 
 interface HomeState {
     animatedValueList: Animated.Value[]
@@ -55,13 +57,20 @@ export class Home extends Component<{ navigation: any }, HomeState> {
         return (
             <ScrollView style={{ top: 0, bottom: 0 }}>
                 {this.state.loading ? <View></View> :
-                    <View style={{ bottom: 40 }}>
-                        {muscleGroups.mainGroups.map((item, index) =>
-                            <Animated.View key={index} style={[this.state.animatedMovingValueList[index].getLayout(), { opacity: this.state.animatedValueList[index] }]}>
-                                <HomeList {...item} index={index} rotate={index % 2 === 0 ? '-5.5deg' : '5.5deg'} bottom={index * 30} key={index}
-                                    onPress={() => { this.props.navigation.navigate("ExercisesList", { muscleGroup: item.systemName }) }} />
-                            </Animated.View>
-                        )}
+                    <View style={{}}>
+                        <View style={{ bottom: 40 }}>
+                            {muscleGroups.mainGroups.map((item, index) =>
+                                <Animated.View key={index} style={[this.state.animatedMovingValueList[index].getLayout(), { opacity: this.state.animatedValueList[index] }]}>
+                                    <View>
+                                        <HomeList {...item} lastIndex={muscleGroups.mainGroups.length - 1} index={index} rotate={index % 2 === 0 ? '-5.5deg' : '5.5deg'} bottom={index * 30} key={index}
+                                            onPress={() => { this.props.navigation.navigate("ExercisesList", { muscleGroup: item.systemName }) }} />
+                                    </View>
+                                </Animated.View>
+                            )}
+                        </View>
+                        <View style={{ backgroundColor: Colors.skyBlue }}>
+                            <AppText>ddfgdfg</AppText>
+                        </View>
                     </View>
 
                 }

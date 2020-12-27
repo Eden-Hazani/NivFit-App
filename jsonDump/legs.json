@@ -1,0 +1,88 @@
+{
+    "exercises": [
+        {
+            "mainList": [
+                {
+                    "name": "Barebell squat",
+                    "shortDescription": "A compound movement that works on your lower body, and if done right you will feel your entire body working.",
+                    "instructorNotes": "• Keep your chest up all the way, mainly while squatting up. • Don't forget to breathe! Exhale while squatting up. • Keep your back neutral and avoid rounded back. • Your elbows should be behind your body. • Make sure you hold the bar in the middle."
+                },
+                {
+                    "startingInstructions": "• Hold the bar using a medium grip, which is a bit wider than your shoulders width. • Stand with the bar placed on your upper back, your feet should be placed a bit wider than your hips, and your toes need to be in a 30 degree angle pointing outward. • Important to keep your head straight, according to your natural spine position. • Keep your chest up.",
+                    "movementInstructions": "•  After entering your starting stance, move your hips backwards like you're just about to sit on a chair, remember! The movement must start from your hips. • Squat down and inhale, pushing your knees to the side, until your hip joint is a bit lower than 90 degrees. • Stand up again, exhaling your breath and moving with your hips all the way up to to starting position."
+                },
+                {
+                    "instructorPref": "My preferred exercise and overall an important one. It's a compound movement that works on your lower body, and if done right you will feel your entire body working.",
+                    "instructorName": "Niv",
+                    "instructorImg": "niv.jpg"
+                }
+            ],
+            "difficultyLevel": 4,
+            "videoURL": "https://www.youtube.com/embed/9em32dDnTck?playlist=9em32dDnTck&loop=1&mute=1",
+            "frontImg": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/man-exercising-in-the-gym-royalty-free-image-1569414297.jpg?resize=980:*"
+        },
+        {
+            "mainList": [
+                {
+                    "name": "Stiff legged deadlift",
+                    "shortDescription": "Compound exercise excellent for building a massive back",
+                    "instructorNotes": "• Keep your chest up all the way • Don't forget to breathe! Exhale while lifting up. •Keep the movement slow, controlling the bar keeping it from falling. • Do not move your neck while performing the exercise, your head must be positioned according to your spine. • Make sure you hold the bar in the middle. • The bar must move in a straight vertical line close to your body. Pay attention to avoid back related injury! • Avoid hyper-extension in your back when going up. • Do not work with your knees. This is not a regular deadlift."
+                },
+                {
+                    "startingInstructions": "• Hold the bar with your shoulders on a width grip. • Standup while your feet are under the barbell, the barbell must be close to your legs in this position. • Bend over with your knees slightly bent. • Your head has to be straight, according to your natural spine position. • Keep your chest up.",
+                    "movementInstructions": "• Lift the bar and straighten your back, exhale while lifting up. • Lower the bar until you feel the stretch in your hamstrings and glutes muscles. • Stand up again, exhaling and moving with your hips all the way up. to the starting position"
+                },
+                {
+                    "instructorPref": "This is a very powerful and compound exercise for building a massive back, Mainly works on your hamstrings and glutes muscles, while strengthening your lower-back. It's actually (almost) a straight legs deadlift.",
+                    "instructorName": "Niv",
+                    "instructorImg": "niv.jpg"
+                }
+            ],
+            "difficultyLevel": 3,
+            "videoURL": "https://www.youtube.com/embed/9em32dDnTck?playlist=9em32dDnTck&loop=1&mute=1",
+            "frontImg": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/man-exercising-in-the-gym-royalty-free-image-1569414297.jpg?resize=980:*"
+        },
+        {
+            "mainList": [
+                {
+                    "name": "Barbell lunges",
+                    "shortDescription": "Strengthens your lower-body and works on your stability",
+                    "instructorNotes": "• Keep your chest up all the way. • Don't forget to breathe! Exhale while lifting up. • Keep the movement slow and controlled. • While standing, make sure your toes are about 30 degrees outward. • Make sure you hold the bar in the middle. • The movement must be done in a vertical line. • Do not move with your body forward, this can cause stress on your knees and lead to injury."
+                },
+                {
+                    "startingInstructions": "• Hold the bar using a medium grip (a bit wider than the width of your shoulders). • Keep your chest up • Your head has to be straight, according to your natural spine position.",
+                    "movementInstructions": "• Take a big step forward with one leg and lower your body until you reach 90 degrees in both knees and hip joints. Make sure your knee isn't touching the floor when you go down. • Drive back up, keeping in the position of the big step. • After finishing your repetitions, move to the other leg switch legs and start over."
+                },
+                {
+                    "instructorPref": "This is a very challenging but a great exercise, the lunges strengthens your lower-body and even works on your stability There are many versions to this exercise, here we will go through the basic one.",
+                    "instructorName": "Niv",
+                    "instructorImg": "niv.jpg"
+                }
+            ],
+            "difficultyLevel": 2,
+            "videoURL": "https://www.youtube.com/embed/9em32dDnTck?playlist=9em32dDnTck&loop=1&mute=1",
+            "frontImg": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/man-exercising-in-the-gym-royalty-free-image-1569414297.jpg?resize=980:*"
+        },
+        {
+            "mainList": [
+                {
+                    "name": "Leg Press",
+                    "shortDescription": "Great compound exercise for your lower-body",
+                    "instructorNotes": "• Keep your heels on the plate all the way. • Don't forget to breathe! Exhale while pressing. • Keep your butt on the seat and refrain from moving it during the exercise. • Do not lock your knees. • Toes must stay at 30 degrees. • Don't place your hands on your knees. • Keep a good range of motion."
+                },
+                {
+                    "startingInstructions": "• Sit on the machine, placing your back and head on its fitted pads. • Place your feet on the plate, a bit wider than your hip width and toes with about 30 degrees outward. • Your hips should be at 90 degrees when placing your feet on the plate, Make sure your feet are not too high or too low. • Your heels should be at around 90 degrees ",
+                    "movementInstructions": "• Press the legs until the knees are almost locked, and repeat."
+                },
+                {
+                    "instructorPref": "Best advantage of the leg press is just ho common this machine is, you can find it almost in any GYM. This exercise is also perfect for those who cannot squat due to health related reasons.",
+                    "instructorName": "Niv",
+                    "instructorImg": "niv.jpg"
+                }
+            ],
+            "difficultyLevel": 2,
+            "videoURL": "https://www.youtube.com/embed/9em32dDnTck?playlist=9em32dDnTck&loop=1&mute=1",
+            "frontImg": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/man-exercising-in-the-gym-royalty-free-image-1569414297.jpg?resize=980:*"
+        }
+    ]
+}

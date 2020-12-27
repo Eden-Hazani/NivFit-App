@@ -8,6 +8,7 @@ import { AppText } from '../components/AppText';
 import { LoadingAnimation } from '../animations/LoadingAnimation';
 import { SearchBar } from 'react-native-elements';
 import { Colors } from '../utility/colors';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 const { width, height } = Dimensions.get('screen')
 
 interface ExercisesListState {
@@ -16,27 +17,34 @@ interface ExercisesListState {
     startAnimation: Animated.ValueXY;
     loading: boolean
     search: string
+    isFavorite: boolean[]
 }
 
 
 
 export class ExercisesList extends Component<{ route: any, navigation: any }, ExercisesListState>{
+    navigationSubscription: any;
     constructor(props: any) {
         super(props)
         this.state = {
+            isFavorite: [],
             search: "",
             exercisesList: [],
             muscleGroup: this.props.route.params.muscleGroup,
             startAnimation: new Animated.ValueXY({ x: 400, y: 0 }),
             loading: true
         }
+        this.navigationSubscription = this.props.navigation.addListener('focus', this.onFocus);
     }
 
     componentDidMount() {
         const getKeyValue = <T, K extends keyof T>(obj: T, key: K): T[K] => obj[key];
         const exercisesList = getKeyValue(muscleGroupFolder, this.state.muscleGroup as any)
-        this.setState({ exercisesList: exercisesList.exercises, loading: false }, () => {
-            this.startAnimation()
+        this.setState({ exercisesList: exercisesList.exercises }, async () => {
+            await this.checkForFavoritism()
+            this.setState({ loading: false }, () => {
+                this.startAnimation()
+            })
         })
     }
 
@@ -73,7 +81,6 @@ export class ExercisesList extends Component<{ route: any, navigation: any }, Ex
             this.setState({ exercisesList: exercisesList.exercises })
             return;
         }
-        console.log(search)
         const exercisesList = this.state.exercisesList.filter((exercise) => { return exercise.mainList && exercise.mainList[0] && exercise.mainList[0].name && exercise.mainList[0].name.includes(search) })
         if (exercisesList.length > 0) {
             this.setState({ exercisesList })
@@ -83,6 +90,35 @@ export class ExercisesList extends Component<{ route: any, navigation: any }, Ex
             const getKeyValue = <T, K extends keyof T>(obj: T, key: K): T[K] => obj[key];
             const exercisesList = getKeyValue(muscleGroupFolder, this.state.muscleGroup as any)
             this.setState({ exercisesList: exercisesList.exercises })
+        }
+    }
+
+    onFocus = () => {
+        this.setState({ loading: true }, async () => {
+            await this.checkForFavoritism().then(() => {
+                this.setState({ loading: false })
+            })
+
+        })
+    }
+
+    checkForFavoritism = async () => {
+        let isFavorite: any[] = [];
+        const favoriteExercisesString = await AsyncStorage.getItem('favoriteExercises');
+        if (!favoriteExercisesString) {
+            return
+        }
+        if (favoriteExercisesString) {
+            const favoriteExercises = JSON.parse(favoriteExercisesString);
+            for (let item of favoriteExercises) {
+                this.state.exercisesList.find((exercise, index) => {
+                    if (exercise.mainList?.[0].name === item.mainList?.[0].name) {
+                        isFavorite[index] = true;
+                    }
+                }
+                );
+            }
+            this.setState({ isFavorite })
         }
     }
 
@@ -108,7 +144,8 @@ export class ExercisesList extends Component<{ route: any, navigation: any }, Ex
                             keyExtractor={(item: any, index: any) => index.toString()}
                             data={this.state.exercisesList}
                             renderItem={({ item, index }: any) => <ExerciseListItem {...item}
-                                padding={20} width={60} height={60}
+                                padding={20} width={width} height={60}
+                                isFavorite={this.state.isFavorite[index]}
                                 headTextAlign={"left"}
                                 subTextAlign={"left"}
                                 direction={'row'}

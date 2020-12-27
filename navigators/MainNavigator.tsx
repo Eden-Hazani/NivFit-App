@@ -15,7 +15,6 @@ import { useNavigationState } from '@react-navigation/native';
 const Stack = createStackNavigator();
 const MainNavigator = ({ navigation }: any) => {
     const routesLength = useNavigationState(state => state.routes[0].state?.routes.length);
-    console.log(routesLength)
     return <Stack.Navigator screenOptions={{
         headerTransparent: true, headerLeft: () => {
             if (routesLength && routesLength > 1) {

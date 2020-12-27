@@ -70,19 +70,23 @@ export class ViewExercise extends Component<{ route: any }, ViewExerciseState> {
     }
 
     favorite = async (item: ExerciseModel) => {
+        // await AsyncStorage.removeItem('favoriteExercises')
         const favoriteExercisesString = await AsyncStorage.getItem('favoriteExercises');
-        console.log(favoriteExercisesString)
         if (!favoriteExercisesString) {
-            await AsyncStorage.setItem('favoriteExercises', JSON.stringify([item])).then(() => {
+            const favoriteList = [item]
+            await AsyncStorage.setItem('favoriteExercises', JSON.stringify(favoriteList)).then(() => {
                 this.checkForFavoritism()
             });
             return;
         }
-        const favoriteExercises = JSON.parse(favoriteExercisesString);
-        const newFavoriteExercises = favoriteExercises.push(item);
-        await AsyncStorage.setItem('favoriteExercises', JSON.stringify(newFavoriteExercises)).then(() => {
-            this.checkForFavoritism()
-        });
+        if (favoriteExercisesString) {
+            const favoriteExercises = JSON.parse(favoriteExercisesString);
+            console.log(favoriteExercises)
+            favoriteExercises.push(item);
+            await AsyncStorage.setItem('favoriteExercises', JSON.stringify(favoriteExercises)).then(() => {
+                this.checkForFavoritism()
+            });
+        }
     }
 
     unFavorite = async (item: ExerciseModel) => {
@@ -91,7 +95,7 @@ export class ViewExercise extends Component<{ route: any }, ViewExerciseState> {
             return;
         }
         const favoriteExercises = JSON.parse(favoriteExercisesString);
-        const newFavoriteExercises = favoriteExercises.filter((savedItem: ExerciseModel) => { item.mainList && savedItem.mainList && (savedItem.mainList[0].name !== item.mainList[0].name) });
+        const newFavoriteExercises = favoriteExercises.filter((savedItem: ExerciseModel) => item.mainList && savedItem.mainList && (savedItem.mainList[0].name !== item.mainList[0].name));
         if (newFavoriteExercises.length === 0) {
             await AsyncStorage.removeItem('favoriteExercises')
             this.checkForFavoritism();
@@ -112,13 +116,13 @@ export class ViewExercise extends Component<{ route: any }, ViewExerciseState> {
                         <View style={{ flex: .3, backgroundColor: Colors.inactiveTint, marginTop: 15 }}>
                             <VideoPlayer videoUrl={this.state.exercise.videoURL || "error"} />
                         </View>
-                        <Animated.View style={[this.state.fullListIntroAnimation.getLayout(), { flex: .5, paddingLeft: 20, paddingRight: 40, backgroundColor: Colors.skyBlue }]}>
+                        <Animated.View style={[this.state.fullListIntroAnimation.getLayout(), { flex: .65, paddingLeft: 20, paddingRight: 40, backgroundColor: Colors.skyBlue }]}>
                             <AnimatedExerciseList data={this.state.exercise} />
                         </Animated.View>
-                        <View style={{ flex: .3, backgroundColor: Colors.white, flexDirection: "row", justifyContent: "space-between" }}>
+                        <View style={{ flex: .17, backgroundColor: Colors.white, flexDirection: "row", justifyContent: "space-between" }}>
                             <View style={{ paddingLeft: 15, paddingTop: 10 }}>
                                 <AppTextHeader>Difficulty Level</AppTextHeader>
-                                <DifficultyLevelIcon difficulty={this.state.exercise.difficultyLevel ? this.state.exercise.difficultyLevel : 1} />
+                                <DifficultyLevelIcon difficulty={this.state.exercise.difficultyLevel ? this.state.exercise.difficultyLevel : 1} animationX={0} animationY={200} />
                             </View>
                             <View style={{ paddingRight: 20, paddingTop: 10 }}>
                                 <TouchableOpacity style={{ justifyContent: "center", backgroundColor: Colors.skyBlue, width: 50, height: 50, borderRadius: 50 }}

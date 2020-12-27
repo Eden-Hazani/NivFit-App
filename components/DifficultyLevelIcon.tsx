@@ -10,7 +10,7 @@ interface DifficultyLevelIconState {
 
 const difficultyIcon = 'lightning-bolt'
 
-export class DifficultyLevelIcon extends Component<{ difficulty: number }, DifficultyLevelIconState>{
+export class DifficultyLevelIcon extends Component<{ difficulty: number, animationX: number, animationY: number }, DifficultyLevelIconState>{
     constructor(props: any) {
         super(props)
         this.state = {
@@ -23,7 +23,7 @@ export class DifficultyLevelIcon extends Component<{ difficulty: number }, Diffi
         let difficultyAnimationArray = this.state.difficultyAnimationArray;
         for (let index = 0; index < this.props.difficulty; index++) {
             difficultyAmount.push(difficultyIcon)
-            difficultyAnimationArray.push(new Animated.ValueXY({ x: 0, y: 200 }))
+            difficultyAnimationArray.push(new Animated.ValueXY({ x: this.props.animationX, y: this.props.animationY }))
         }
         this.setState({ difficultyAmount, difficultyAnimationArray }, () => {
             let animationTimeOut: number = 300
