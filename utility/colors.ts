@@ -6,6 +6,7 @@ export class Colors {
     public static black: string;
     public static white: string;
     public static lightGray: string;
+    public static mahogany: string;
 
     public static async InitializeAsync() {
         Colors.primaryBackground = 'white'
@@ -14,6 +15,7 @@ export class Colors {
         Colors.black = 'black'
         Colors.white = "white"
         Colors.lightGray = "#CED3DC"
+        Colors.mahogany = "#C44900"
     }
 }
 

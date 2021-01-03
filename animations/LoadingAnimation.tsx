@@ -10,6 +10,6 @@ export class LoadingAnimation extends Component<{ visible: boolean }>{
             width: 150,
             marginTop: "5%",
             alignSelf: 'center',
-        }} resizeMode="cover" autoPlay loop={false} source={require('../jsonDump/lottieAnimation/loading.json')} />
+        }} resizeMode="cover" autoPlay loop={false} source={require('./lottieAnimation/loading.json')} />
     }
 }

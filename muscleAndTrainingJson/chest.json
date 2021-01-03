@@ -1,0 +1,172 @@
+{
+    "exercises": [
+        {
+            "mainList": [
+                {
+                    "name": "Barbell bench Press",
+                    "shortDescription": "A popular compound movement that every serious trainee has to know how to perform",
+                    "instructorNotes": "• Keep your butt on the bench during the whole exercise. • Don't forget to breathe! Exhale while pressing. • Keep your head neutral and avoid moving it. • Keep your shoulder-blades locked, and your chest up. • Make sure your wrists are straight all the time to avoid injury. • Arch your lower back, while keeping your butt on the bench. • Your feet must be placed on the floor, if you're suffering from lower-back pains – you can use a step to help you place your feet higher. • The bar is supposed to touch your chest when it goes down, Hold it for a second and then push it up."
+                },
+                {
+                    "startingInstructions": "• Lie on the bench. • Squeeze the shoulder-blades and arch your lower back a bit while your butt remains on the bench. • Hold the bar with a wide grip – a bit wider than your shoulder width.",
+                    "movementInstructions": "• Take out the bar. Keep your elbows a bit lower than the height of your shoulders, try to place your elbows at around 45 degrees out from your body. • Lower the bar in a vertical movement right to your mid-chest. Then, push up the bar while breathing out, until you lock your elbows."
+                },
+                {
+                    "instructorPref": "One of the best chest exercises out there, works on your upper body so well – Chest, shoulders, and triceps.",
+                    "instructorName": "Niv",
+                    "instructorImg": "niv.jpg"
+                }
+            ],
+            "difficultyLevel": 2,
+            "videoURL": "https://www.youtube.com/embed/9em32dDnTck?playlist=9em32dDnTck&loop=1&mute=1",
+            "frontImg": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/man-exercising-in-the-gym-royalty-free-image-1569414297.jpg?resize=980:*"
+        },
+        {
+            "mainList": [
+                {
+                    "name": "Incline Dumbbell Press",
+                    "shortDescription": "Incline press focus on the upper part of your chest, while also working well on the front part of your shoulders. ",
+                    "instructorNotes": "• The bench should be at around 30 degrees. (The higher the degree, the more you target your shoulders). • Keep the movement vertical, dumbbells should be above your eyes at top position. • Keep your butt on the bench during the whole exercise. • Don't forget to breathe! Exhale while pressing. • Keep your head neutral and resting on the head cushion and avoid moving it. • Keep your shoulder-blades locked, and your chest up. • Make sure your wrists are straight all the time. • Arch your lower back, while keeping your butt on the bench. • Your feet must be placed on the floor, if you're suffering from lower-back pains – you can use a step to help you place your feet higher. • Control the movement, especially while lowering the dumbbells."
+                },
+                {
+                    "startingInstructions": "• Sit on an inclined bench – at about 30 degrees. • Hold the dumbbells with bent elbows, a bit lower than the height of your shoulders. Elbows should be around 45 degrees out from your body. • Your head has to be straight, according to your natural spine position. • Keep your chest up, shoulder-blades squeezed. • Hold the dumbbells with a wide grip – A bit wider than the width of your shoulders.",
+                    "movementInstructions": "• Press the dumbbells upwards in a vertical movement until they almost touch each other. the the end position the dumbbells should be above your eyes. • lower them back until you feel a slight stretch in your chest and repeat."
+                },
+                {
+                    "instructorPref": "Great exercise with free dumbbells, the added difficulty of the incline position adds to your building strength.",
+                    "instructorName": "Niv",
+                    "instructorImg": "niv.jpg"
+                }
+            ],
+            "difficultyLevel": 3,
+            "videoURL": "https://www.youtube.com/embed/9em32dDnTck?playlist=9em32dDnTck&loop=1&mute=1",
+            "frontImg": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/man-exercising-in-the-gym-royalty-free-image-1569414297.jpg?resize=980:*"
+        },
+        {
+            "mainList": [
+                {
+                    "name": "Dumbbell fly",
+                    "shortDescription": "An exercise that really focuses on the chest, without involving the elbow joints.",
+                    "instructorNotes": "• Don't perform the exercise with straight arms! You must bend your elbows a bit to avoid injury. • Keep your chest up all the way, Shoulder-blades squeezed. • Don't forget to breathe! Exhale while lifting up. • Keep the movement slow and controlled. • The movement must be done in a vertical line. • Do not move with your body forward, this will cause a great stress on your knees and lead to injury."
+                },
+                {
+                    "startingInstructions": "• Lie on a flat bench, holding the dumbbells with straighten arms just above your chest. Your elbows should be slightly bended. • Keep your chest up. • Keep your head straight, according to your natural spine position.",
+                    "movementInstructions": "• Open your arms to the sides, keeping the slight bend in your elbows, Elbows should be a bit lower than shoulders height. Stop when you feel a little stretch in your chest. • Lift the dumbbells back until they almost touch each other and repeat."
+                },
+                {
+                    "instructorPref": "An exercise that really focuses on the chest, without involving the elbow joints. You have to control the movement well and be careful with this exercise as it can lead to injury if done wrong.",
+                    "instructorName": "Niv",
+                    "instructorImg": "niv.jpg"
+                }
+            ],
+            "difficultyLevel": 3,
+            "videoURL": "https://www.youtube.com/embed/9em32dDnTck?playlist=9em32dDnTck&loop=1&mute=1",
+            "frontImg": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/man-exercising-in-the-gym-royalty-free-image-1569414297.jpg?resize=980:*"
+        },
+        {
+            "mainList": [
+                {
+                    "name": "Wide dips",
+                    "shortDescription": "Common and easy exercise, you can even perform outside without any need for gym equipment.",
+                    "instructorNotes": "• Lean your body forward for a better focus on your chest muscles. • Grip the bar wider then the width of your shoulders. • Don't go too deep, it can harm your shoulders. • Keep your elbows a bit behind your body. • Don't forget to breathe! Exhale while lifting up. • Keep your head in a neutral position and avoid moving it. • Keep your shoulder-blades locked, chest up. • Make sure your wrists are straight all the time."
+                },
+                {
+                    "startingInstructions": "• Grab the dip bars with your arms straight. • Squeeze your shoulder-blades, chest up. • Create an angle by sending your legs behind your body and leaning forward so that your entire body is at around 20 degrees incline. • Keep the elbows out and a bit behind your shoulders line.",
+                    "movementInstructions": "• Dip your body down until you feel a stretch in your shoulders. Your elbows should reach the height of your shoulders (can go a bit lower). • Lift up until your elbows are almost locked and repeat.  "
+                },
+                {
+                    "instructorPref": "Extremely simple to preform, a great exercise for starters",
+                    "instructorName": "Niv",
+                    "instructorImg": "niv.jpg"
+                }
+            ],
+            "difficultyLevel": 1,
+            "videoURL": "https://www.youtube.com/embed/9em32dDnTck?playlist=9em32dDnTck&loop=1&mute=1",
+            "frontImg": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/man-exercising-in-the-gym-royalty-free-image-1569414297.jpg?resize=980:*"
+        },
+        {
+            "mainList": [
+                {
+                    "name": "Standing cable bench Press",
+                    "shortDescription": "A nice version of the chest press using the cable machine.",
+                    "instructorNotes": "• The movement should be made from your elbows. • Don't forget to breathe! Exhale while pressing. • Keep your shoulder-blades locked, chest up. • Make sure your wrists are straight all the time. • Control the movement, especially when bringing the handles back. • Brace your Abs and keep your torso straight. • The handles are supposed to touch your chest when retracting"
+                },
+                {
+                    "startingInstructions": "• Set the cables to the height of your shoulders. • Hold the handles,  stand in the center of the machine and take a big step forward. Bend your elbows and place them a bit lower than the height of your shoulders. • Squeeze your shoulder-blades, chest up.",
+                    "movementInstructions": "• Push the handles forward with your elbows until your arms are almost straight. • Now retract the cables slowly to the starting position and repeat."
+                },
+                {
+                    "instructorPref": "A lot of core work while having a wide range of motion",
+                    "instructorName": "Niv",
+                    "instructorImg": "niv.jpg"
+                }
+            ],
+            "difficultyLevel": 3,
+            "videoURL": "https://www.youtube.com/embed/9em32dDnTck?playlist=9em32dDnTck&loop=1&mute=1",
+            "frontImg": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/man-exercising-in-the-gym-royalty-free-image-1569414297.jpg?resize=980:*"
+        },
+        {
+            "mainList": [
+                {
+                    "name": "Standing cable Fly",
+                    "shortDescription": "A nice version for chest flies with using the cable machine.",
+                    "instructorNotes": "• The movement should be made from the joints of your shoulders. • Don't forget to breathe! Exhale while pressing. • Keep your shoulder-blades locked, chest up. • Make sure your wrists are straight all the time. • Control the movement, especially when bringing the handles back. • Brace your Abs and keep your torso straight. • Don't stretch the chest too much when opening your arms out."
+                },
+                {
+                    "startingInstructions": "• Set the cables to the height of your shoulders. • Hold the handles, stand in the center of the machine and take a big step forward. Straighten out your arms with a small bend in your elbows. Elbows should also be placed lower than the height of your shoulders. • Squeeze your shoulder-blades, chest up. ",
+                    "movementInstructions": "• Close your arms until the handles almost touch in each other. • Slowly open your arms to the sides, until you feel the stretch in your chest. Don't forget to keep the slight bend in your elbows during the entire exercise."
+                },
+                {
+                    "instructorPref": "A lot of core work while having a wide range of motion",
+                    "instructorName": "Niv",
+                    "instructorImg": "niv.jpg"
+                }
+            ],
+            "difficultyLevel": 3,
+            "videoURL": "https://www.youtube.com/embed/9em32dDnTck?playlist=9em32dDnTck&loop=1&mute=1",
+            "frontImg": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/man-exercising-in-the-gym-royalty-free-image-1569414297.jpg?resize=980:*"
+        },
+        {
+            "mainList": [
+                {
+                    "name": "High standing cable Fly",
+                    "shortDescription": "This exercise focuses on your lower part of your chest, involving some back work as well.",
+                    "instructorNotes": "• The movement should be made from the joint of your shoulders. • The handles are supposed to move a bit forward forward and all the way down. • Don't forget to breathe! Exhale while pressing. • Keep your shoulder-blades locked, chest up. • Make sure your wrists are straight all the time. • Control the movement, especially when retracting the handles. • Brace your Abs and keep your torso straight. • Don't stretch the chest too much when opening your arms out."
+                },
+                {
+                    "startingInstructions": "• Set-up the cables to the highest position. • Hold the handles, stand in the center of the machine and take a big step forward. Straighten your arms with a small bend in your elbows. Elbows are also should also be placed lower than the height of your shoulders. • Squeeze your shoulder-blades, chest up.",
+                    "movementInstructions": "• Close your (almost) straight arms until the handles almost touch each other. Pay attention: You should finish the movement when the handles moved a bit forward and all the way down. • Slowly open your arms to the sides retracting to the starting position, until you feel the stretch in your chest. Don't forget to keep the slight bend in your elbows during the entire exercise."
+                },
+                {
+                    "instructorPref": "Great chest exercise, the big movement range gives you a big advantage over other similar exercises.",
+                    "instructorName": "Niv",
+                    "instructorImg": "niv.jpg"
+                }
+            ],
+            "difficultyLevel": 3,
+            "videoURL": "https://www.youtube.com/embed/9em32dDnTck?playlist=9em32dDnTck&loop=1&mute=1",
+            "frontImg": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/man-exercising-in-the-gym-royalty-free-image-1569414297.jpg?resize=980:*"
+        },
+        {
+            "mainList": [
+                {
+                    "name": "Low standing cable Fly",
+                    "shortDescription": "This exercise focuses on your upper part of your chest, including the front deltas as well.",
+                    "instructorNotes": "• The movement should be made from the joint of your shoulders. • The handles are supposed to move forward and upwards. • Don't forget to breathe! Exhale while pressing. • Keep your shoulder-blades locked, chest up. • Make sure your wrists are straight during the entire exercise. • Control the movement, especially when retracting the handles backwards. • Brace your Abs and keep your torso straight. • Don't stretch the chest too much when retracting your arms."
+                },
+                {
+                    "startingInstructions": "• Set-up the cables to the lowest position. • Stand in the center of the machine and hold the handles, take a big step forward. Straighten out your arms with a small bend in your elbows. Elbows should also be placed lower than the height of your shoulders. • Squeeze your shoulder-blades, chest up.",
+                    "movementInstructions": "• Close your (almost) straight arms until the handles almost touch each other. • The range of your movement should be from the starting position upwards to the line of your eyes. The handles should move upwards and forwards, ending the movement when reaching the line of your eyes."
+                },
+                {
+                    "instructorPref": "Great chest exercise, the big movement range gives you a big advantage over other similar exercises.",
+                    "instructorName": "Niv",
+                    "instructorImg": "niv.jpg"
+                }
+            ],
+            "difficultyLevel": 3,
+            "videoURL": "https://www.youtube.com/embed/9em32dDnTck?playlist=9em32dDnTck&loop=1&mute=1",
+            "frontImg": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/man-exercising-in-the-gym-royalty-free-image-1569414297.jpg?resize=980:*"
+        }
+    ]
+}

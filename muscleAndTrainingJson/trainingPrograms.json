@@ -16,6 +16,34 @@
                         "numberOfSets": 6,
                         "numberOfReps": 5,
                         "muscleGroup": "Legs"
+                    },
+                    {
+                        "superSet": [
+                            {
+                                "exercise": "Standing cable Fly",
+                                "numberOfSets": 3,
+                                "numberOfReps": 10,
+                                "muscleGroup": "Chest"
+                            },
+                            {
+                                "exercise": "Low standing cable Fly",
+                                "numberOfSets": 3,
+                                "numberOfReps": 10,
+                                "muscleGroup": "Chest"
+                            }
+                        ]
+                    },
+                    {
+                        "exercise": "Leg Press",
+                        "numberOfSets": 3,
+                        "numberOfReps": 10,
+                        "muscleGroup": "Legs"
+                    },
+                    {
+                        "exercise": "Barbell lunges",
+                        "numberOfSets": 6,
+                        "numberOfReps": 5,
+                        "muscleGroup": "Legs"
                     }
                 ],
                 "monday": [],

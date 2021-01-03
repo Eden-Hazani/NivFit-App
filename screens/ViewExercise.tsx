@@ -70,7 +70,6 @@ export class ViewExercise extends Component<{ route: any }, ViewExerciseState> {
     }
 
     favorite = async (item: ExerciseModel) => {
-        // await AsyncStorage.removeItem('favoriteExercises')
         const favoriteExercisesString = await AsyncStorage.getItem('favoriteExercises');
         if (!favoriteExercisesString) {
             const favoriteList = [item]

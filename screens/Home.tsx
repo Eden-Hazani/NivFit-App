@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, StyleSheet, Animated, ScrollView } from 'react-native';
 import { AppText } from '../components/AppText';
 import { HomeList } from '../components/ListComponents/HomeList';
-import muscleGroups from '../jsonDump/muscleGroups.json';
+import muscleGroups from '../muscleAndTrainingJson/muscleGroups.json';
 import { Colors } from '../utility/colors';
 
 interface HomeState {

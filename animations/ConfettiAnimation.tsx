@@ -10,6 +10,6 @@ export class ConfettiAnimation extends Component<{ visible: boolean }>{
             width: 250,
             marginTop: "5%",
             alignSelf: 'center',
-        }} resizeMode="cover" autoPlay loop={true} source={require('../jsonDump/lottieAnimation/confeetiAnimation.json')} />
+        }} resizeMode="cover" autoPlay loop={true} source={require('./lottieAnimation/confeetiAnimation.json')} />
     }
 }

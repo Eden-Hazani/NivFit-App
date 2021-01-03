@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Animated, Dimensions } from 'react-native';
 import { ExerciseModel } from '../models/ExerciseModel';
-import * as muscleGroupFolder from "../jsonDump";
+import * as muscleGroupFolder from "../muscleAndTrainingJson";
 import { ExerciseListItem } from '../components/ListComponents/ExerciseListItem';
 import { ListItemSeparator } from '../components/ListComponents/ListItemSeperatorLine';
 import { AppText } from '../components/AppText';
@@ -94,10 +94,12 @@ export class ExercisesList extends Component<{ route: any, navigation: any }, Ex
     }
 
     onFocus = () => {
-        this.setState({ loading: true }, async () => {
-            await this.checkForFavoritism().then(() => {
-                this.setState({ loading: false })
-            })
+        this.setState({ loading: true }, () => {
+            setTimeout(async () => {
+                await this.checkForFavoritism().then(() => {
+                    this.setState({ loading: false })
+                })
+            }, 250);
 
         })
     }
@@ -151,7 +153,6 @@ export class ExercisesList extends Component<{ route: any, navigation: any }, Ex
                                 direction={'row'}
                                 justifyContent={"flex-start"} textDistanceFromImg={10}
                                 onPress={() => { this.props.navigation.navigate("ViewExercise", { exercise: item }) }} />}
-                            pagingEnabled
                             showsHorizontalScrollIndicator={false}
                             scrollEventThrottle={16}
                         />

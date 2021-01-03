@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, FlatList } from 'react-native';
 import { TrainingProgramModal } from '../../models/TrainingProgramModal';
-import * as trainingJson from '../../jsonDump/trainingPrograms.json';
+import * as trainingJson from '../../muscleAndTrainingJson/trainingPrograms.json';
 import { TrainingProgramListItem } from '../../components/ListComponents/TrainingProgramListItem';
 
 interface PickTrainingProgramsState {

@@ -42,7 +42,9 @@ export class WeeklyProgram extends Component<{ trainingProgram: TrainingProgramM
         });
     }
 
-    componentDidMount() {
+    async componentDidMount() {
+        // await AsyncStorage.removeItem('finishedProgramDates')
+        // await AsyncStorage.removeItem('achievements')
         this.setState({ weekDays: this.setWholeDateList() }, () => {
             this.programsThatHaveBeenCompleted().then(() => {
                 this.setState({ loading: false })
@@ -100,18 +102,18 @@ export class WeeklyProgram extends Component<{ trainingProgram: TrainingProgramM
 
     programsThatHaveBeenCompleted = async () => {
         const finishedDatesString = await AsyncStorage.getItem("finishedProgramDates");
-        console.log(finishedDatesString)
+        let completedDatesArray: any = []
+        let index: number = 0;
         if (finishedDatesString) {
-            for (let item of JSON.parse(finishedDatesString)) {
-                let completedDatesArray = this.state.weekDays.map((day, index) => {
-                    if (item === day.date) {
-                        return true
-                    } else {
-                        return false
-                    }
-                })
-                this.setState({ completedDatesArray })
+            for (let item of this.state.weekDays) {
+                if (JSON.parse(finishedDatesString).includes(item.date)) {
+                    completedDatesArray[index] = true;
+                } else {
+                    completedDatesArray[index] = false;
+                }
+                index++
             }
+            this.setState({ completedDatesArray })
         }
     }
 

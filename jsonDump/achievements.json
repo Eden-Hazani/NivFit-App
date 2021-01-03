@@ -1,0 +1,32 @@
+{
+    "achievements": {
+        "1": {
+            "description": "Completed your first workout!",
+            "img": "https://i.imgur.com/fH3PYb0.png"
+        },
+        "5": {
+            "description": "Completed your fifth workout!",
+            "img": "https://i.imgur.com/yZtO70V.png"
+        },
+        "10": {
+            "description": "Completed your tenth workout!",
+            "img": "https://i.imgur.com/0nbkIP4.png"
+        },
+        "15": {
+            "description": "Completed your fifteen workout!",
+            "img": "https://i.imgur.com/YsRWDv4.png"
+        },
+        "20": {
+            "description": "Completed your twentieth workout!",
+            "img": "https://i.imgur.com/NE4CX8t.png"
+        },
+        "25": {
+            "description": "Completed your twenty fifth workout!",
+            "img": "https://i.imgur.com/Z2p5Itm.png"
+        },
+        "50": {
+            "description": "Completed your fiftieth workout!",
+            "img": "https://i.imgur.com/VE0ILLU.png"
+        }
+    }
+}

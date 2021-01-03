@@ -45,6 +45,8 @@ export class ExerciseListItem extends Component<any>{
 
 const styles = StyleSheet.create({
     container: {
+        justifyContent: "center",
+        alignItems: "center",
         marginTop: 5
     }
 });

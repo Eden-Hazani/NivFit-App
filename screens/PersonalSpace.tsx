@@ -2,12 +2,14 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import React, { Component } from 'react';
 import { View, StyleSheet, TouchableOpacity, Dimensions, Animated } from 'react-native';
 import { LoadingAnimation } from '../animations/LoadingAnimation';
+import { AchievementWindow } from '../components/AchievementWindow';
 import { AppText } from '../components/AppText';
 import { AppTextHeader } from '../components/AppTextHeader';
 import { WeeklyProgram } from '../components/WeeklyProgram';
 import { TrainingProgramModal } from '../models/TrainingProgramModal';
 import { Colors } from '../utility/colors';
 import { IconGen } from '../utility/IconGen';
+import Modal from 'react-native-modal';
 const { width, height } = Dimensions.get('screen');
 
 interface PersonalSpaceState {
@@ -16,8 +18,10 @@ interface PersonalSpaceState {
     ButtonSizeEntranceAnimation: Animated.Value
     headerStartAnimation: Animated.ValueXY
     weekProgramStartAnimation: Animated.ValueXY
+    achievementsStartAnimation: Animated.ValueXY
     activeWeeklyProgram: TrainingProgramModal
     loading: boolean
+    achievementModal: boolean
 }
 
 export class PersonalSpace extends Component<{ navigation: any }, PersonalSpaceState>{
@@ -26,6 +30,8 @@ export class PersonalSpace extends Component<{ navigation: any }, PersonalSpaceS
     constructor(props: any) {
         super(props)
         this.state = {
+            achievementModal: false,
+            achievementsStartAnimation: new Animated.ValueXY({ x: -200, y: 0 }),
             loading: true,
             activeWeeklyProgram: new TrainingProgramModal(),
             headerStartAnimation: new Animated.ValueXY({ x: 0, y: -60 }),
@@ -77,7 +83,16 @@ export class PersonalSpace extends Component<{ navigation: any }, PersonalSpaceS
     animateStartWeekProgram = () => {
         Animated.sequence([
             Animated.timing(this.state.weekProgramStartAnimation, {
-                toValue: { x: 0, y: 80 },
+                toValue: { x: 0, y: 0 },
+                duration: 450,
+                useNativeDriver: false
+            }),
+        ]).start()
+    }
+    animateStartAchievements = () => {
+        Animated.sequence([
+            Animated.timing(this.state.achievementsStartAnimation, {
+                toValue: { x: -100, y: -100 },
                 duration: 450,
                 useNativeDriver: false
             }),
@@ -97,7 +112,9 @@ export class PersonalSpace extends Component<{ navigation: any }, PersonalSpaceS
     onFocus = () => {
         this.getActiveTrainingProgram()
     }
+
     componentDidMount() {
+        this.animateStartAchievements()
         this.getActiveTrainingProgram()
         this.animateStartColorBar()
         this.animateStartFavoriteButton()
@@ -137,7 +154,31 @@ export class PersonalSpace extends Component<{ navigation: any }, PersonalSpaceS
                                 </TouchableOpacity>
                             </Animated.View>
                         </View>
-                        <View style={{ alignItems: "flex-start", left: 150, top: -height / 10 }}>
+
+                        <View style={{ alignItems: "flex-start", left: 150 }}>
+                            <Animated.View style={[this.state.achievementsStartAnimation.getLayout(), {
+                                transform: [
+                                    {
+                                        scale: this.state.ButtonSizeEntranceAnimation.interpolate({
+                                            inputRange: [0, 1],
+                                            outputRange: [.2, 1]
+                                        })
+                                    },
+                                ]
+                            }]}>
+                                <TouchableOpacity onPress={() => { this.setState({ achievementModal: true }) }} style={[{
+                                    backgroundColor: Colors.skyBlue, width: 105, height: 105,
+                                    borderRadius: 100, justifyContent: "flex-end", alignItems: "center"
+                                }]}>
+                                    <View style={{ top: 10 }}>
+                                        <AppTextHeader textAlign={'center'} fontSize={12} letterSpacing={1}>Achievements</AppTextHeader>
+                                    </View>
+                                    <IconGen name={"star"} size={70} />
+                                </TouchableOpacity>
+                            </Animated.View>
+                        </View>
+
+                        <View style={{ alignItems: "flex-start", left: 150, top: -height / 5.2 }}>
                             <Animated.View style={[this.state.FavoriteButtonMoveAnimation.getLayout(), {
                                 transform: [
                                     {
@@ -159,6 +200,7 @@ export class PersonalSpace extends Component<{ navigation: any }, PersonalSpaceS
                                 </TouchableOpacity>
                             </Animated.View>
                         </View>
+
                         <Animated.View style={[this.state.weekProgramStartAnimation.getLayout(), { left: 30, alignItems: "center" }]}>
                             <AppTextHeader fontSize={20}>YOUR WEEKLY PROGRAM</AppTextHeader>
                             {this.state.activeWeeklyProgram.week ?
@@ -169,6 +211,20 @@ export class PersonalSpace extends Component<{ navigation: any }, PersonalSpaceS
                         </Animated.View>
                     </View>
                 }
+                <Modal style={{
+                    backgroundColor: 'white',
+                    margin: 0,
+                    marginTop: 30,
+                    alignItems: undefined,
+                    justifyContent: undefined,
+                }} isVisible={this.state.achievementModal}
+                    swipeDirection={["up", "down"]}
+                    swipeThreshold={5}
+                    onSwipeComplete={(e) => { this.setState({ achievementModal: false }) }}>
+                    <View style={{ flex: 1 }}>
+                        <AchievementWindow />
+                    </View>
+                </Modal>
             </View>
         )
     }
