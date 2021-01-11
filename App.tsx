@@ -9,6 +9,16 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import WelcomeScreenNavigator from './navigators/WelcomeScreenNavigator';
 import MainContext from './utility/context';
 import * as Updates from 'expo-updates';
+import * as Permissions from 'expo-permissions';
+import * as Notifications from 'expo-notifications';
+
+Notifications.setNotificationHandler({
+  handleNotification: async () => ({
+    shouldShowAlert: true,
+    shouldPlaySound: true,
+    shouldSetBadge: false,
+  }),
+});
 
 interface AppState {
   isReady: boolean
@@ -23,7 +33,22 @@ export class App extends React.Component<{}, AppState>{
       isReady: false,
       isFirstUse: false
     }
+
   }
+
+
+  askPermissions = async () => {
+    const { status: existingStatus } = await Permissions.getAsync(Permissions.NOTIFICATIONS);
+    let finalStatus = existingStatus;
+    if (existingStatus !== "granted") {
+      const { status } = await Permissions.askAsync(Permissions.NOTIFICATIONS);
+      finalStatus = status;
+    }
+    if (finalStatus !== "granted") {
+      return false;
+    }
+    return true;
+  };
 
   checkForUpdates = async () => {
     if ((await Updates.checkForUpdateAsync()).isAvailable) {
@@ -33,10 +58,13 @@ export class App extends React.Component<{}, AppState>{
     }
   }
 
+
+
   async componentDidMount() {
     if (!__DEV__) {
       this.checkForUpdates()
     }
+    this.askPermissions()
     // await AsyncStorage.removeItem('isFirstUse')
     const isFirstUse = await AsyncStorage.getItem('isFirstUse');
     if (isFirstUse === null) {

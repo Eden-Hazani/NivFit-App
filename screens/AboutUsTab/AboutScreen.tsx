@@ -29,7 +29,7 @@ export class AboutScreen extends Component<{ navigation: any }, AboutScreenState
         this.startingAnimation()
     }
     onFocus = () => {
-
+        this.startingAnimation()
     }
     startingAnimation = () => {
         Animated.sequence([

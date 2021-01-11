@@ -129,8 +129,8 @@ export class ExercisesList extends Component<{ route: any, navigation: any }, Ex
         return (
             <View style={styles.container}>
                 {this.state.loading ? <LoadingAnimation visible={this.state.loading} /> :
-                    <View>
-                        <View style={{ width: width / 1.5, alignSelf: 'center' }}>
+                    <View style={{ flex: 1 }}>
+                        <View style={{ width: width / 1.5, alignSelf: 'center', flex: 0.1 }}>
                             <SearchBar
                                 searchIcon={false}
                                 containerStyle={{ backgroundColor: Colors.white, borderRadius: 150 }}
@@ -142,7 +142,7 @@ export class ExercisesList extends Component<{ route: any, navigation: any }, Ex
                             />
                         </View>
                         <Animated.FlatList
-                            style={this.state.startAnimation.getLayout()}
+                            style={[this.state.startAnimation.getLayout(), { flex: 0.8, backgroundColor: Colors.skyBlue }]}
                             keyExtractor={(item: any, index: any) => index.toString()}
                             data={this.state.exercisesList}
                             renderItem={({ item, index }: any) => <ExerciseListItem {...item}
@@ -154,7 +154,6 @@ export class ExercisesList extends Component<{ route: any, navigation: any }, Ex
                                 justifyContent={"flex-start"} textDistanceFromImg={10}
                                 onPress={() => { this.props.navigation.navigate("ViewExercise", { exercise: item }) }} />}
                             showsHorizontalScrollIndicator={false}
-                            scrollEventThrottle={16}
                         />
                     </View>
                 }
@@ -166,6 +165,6 @@ export class ExercisesList extends Component<{ route: any, navigation: any }, Ex
 
 const styles = StyleSheet.create({
     container: {
-
+        flex: 1
     }
 });

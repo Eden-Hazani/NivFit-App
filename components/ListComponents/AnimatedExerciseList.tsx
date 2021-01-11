@@ -85,7 +85,7 @@ const Item = ({ scrollX, index, name, instructorImg, startingInstructions, movem
                     </View>
                     <View style={styles.textContainer}>
                         <Animated.Text style={[styles.description,
-                        { left: 10, transform: [{ translateY: translateYCouchName }], color: Colors.black }
+                        { left: 10, transform: [{ translateY: translateYCouchName }], color: Colors.white }
                         ]}>{instructorPref}</Animated.Text>
                     </View>
                     <Animated.Image
@@ -108,7 +108,7 @@ const Item = ({ scrollX, index, name, instructorImg, startingInstructions, movem
                     </View>
                     <View style={styles.textContainer}>
                         <Animated.Text style={[styles.description,
-                        { transform: [{ translateX: translateXShortDesc }], color: Colors.black }
+                        { transform: [{ translateX: translateXShortDesc }], color: Colors.white }
                         ]}>{shortDescription}</Animated.Text>
                     </View>
                     <View style={styles.textContainer}>
@@ -118,7 +118,7 @@ const Item = ({ scrollX, index, name, instructorImg, startingInstructions, movem
                     </View>
                     <View style={styles.textContainer}>
                         <Animated.Text style={[styles.description,
-                        { left: 10, transform: [{ translateY: translateYCouchName }], color: Colors.black }
+                        { left: 10, transform: [{ translateY: translateYCouchName }], color: Colors.white }
                         ]}>{instructorNotes.replace(/\• /g, '\n\n• ').replace(/\- /g, '\n\n- ')}</Animated.Text>
                     </View>
                 </ScrollView>
@@ -133,7 +133,7 @@ const Item = ({ scrollX, index, name, instructorImg, startingInstructions, movem
                         </View>
                         <View style={[styles.textContainer]}>
                             <Animated.Text style={[styles.description,
-                            { flex: .2, transform: [{ translateY: translateYDesc }], color: Colors.black }
+                            { flex: .2, transform: [{ translateY: translateYDesc }], color: Colors.white }
                             ]}>{startingInstructions.replace(/\• /g, '\n\n• ').replace(/\- /g, '\n\n- ')}</Animated.Text>
                         </View>
                     </View>
@@ -145,7 +145,7 @@ const Item = ({ scrollX, index, name, instructorImg, startingInstructions, movem
                         </View>
                         <View style={[styles.textContainer, { paddingBottom: 30 }]}>
                             <Animated.Text style={[styles.description,
-                            { flex: .1, transform: [{ translateY: translateYDesc }], color: Colors.black }
+                            { flex: .1, transform: [{ translateY: translateYDesc }], color: Colors.white }
                             ]}>{movementInstructions.replace(/\• /g, '\n\n• ').replace(/\- /g, '\n\n- ')}</Animated.Text>
                         </View>
                     </View>

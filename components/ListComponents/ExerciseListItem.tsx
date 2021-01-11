@@ -33,7 +33,7 @@ export class ExerciseListItem extends Component<any>{
                         <Image style={{
                             borderRadius: this.props.borderRadius ? this.props.borderRadius : 0,
                             zIndex: -10,
-                            height: height / 6, width: this.props.width ? this.props.width : width, resizeMode: "cover"
+                            height: height / 4.5, width: this.props.width ? this.props.width : width, resizeMode: "cover"
                         }} uri={this.props.frontImg} />
                     </View>
                 </TouchableOpacity>
