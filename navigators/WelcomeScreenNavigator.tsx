@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Colors } from '../utility/colors';
-import { Welcome } from '../screens/Welcome';
+import Welcome from '../screens/Welcome';
 
 
 

@@ -65,7 +65,7 @@ export class App extends React.Component<{}, AppState>{
       this.checkForUpdates()
     }
     this.askPermissions()
-    // await AsyncStorage.removeItem('isFirstUse')
+    await AsyncStorage.removeItem('isFirstUse')
     const isFirstUse = await AsyncStorage.getItem('isFirstUse');
     if (isFirstUse === null) {
       this.setState({ isFirstUse: true })
@@ -85,6 +85,7 @@ export class App extends React.Component<{}, AppState>{
   render() {
     const firstUse = this.state.isFirstUse
     const { setFirstUse } = this
+    console.log(firstUse)
     return (
       <SafeAreaView style={styles.container}>
         {this.state.isReady ?
